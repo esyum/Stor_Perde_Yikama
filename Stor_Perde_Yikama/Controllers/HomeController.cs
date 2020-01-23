@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Stor_Perde_Yikama.Context;
+using Stor_Perde_Yikama.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +12,8 @@ namespace Stor_Perde_Yikama.Controllers
     {
         public ActionResult Index()
         {
+            DatabaseContext db = new DatabaseContext();
+            List<Slayder> slayt = db.slayder.ToList();
             return View();
         }
 
