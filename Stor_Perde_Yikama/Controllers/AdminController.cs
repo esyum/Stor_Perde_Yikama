@@ -12,6 +12,11 @@ namespace Stor_Perde_Yikama.Controllers
     {
         DatabaseContext db = new DatabaseContext();
         // GET: Admin
+        public ActionResult Index()
+        {
+            return View();
+        }
+
         public ActionResult MySlayder()
         {
             List<Slayder> _slayder = db.slayder.ToList();

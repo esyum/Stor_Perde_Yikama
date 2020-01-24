@@ -18,7 +18,11 @@
     </script>
     <!-- CSS Files -->
     @Styles.Render("~/assets/css")
-
+    <!-- CSS Files -->
+    @*<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/atlantis.min.css">*@
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="../../assets/css/demo.css">
 
 </head>
 <body data-background-color="dark2">
@@ -59,14 +63,14 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="tables/tables.html" aria-expanded="false">
+                            <a href="/Admin/myslayder" aria-expanded="false">
                                 <i class="fas fa-table"></i>
                                 <p>Slayder</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="tables/tables.html" aria-expanded="false">
+                            <a href="/Admin/mygalery" aria-expanded="false">
                                 <i class="fas fa-table"></i>
                                 <p>Galeri</p>
                             </a>
@@ -93,7 +97,6 @@
 
     @Scripts.Render("~/assets/js/core/bootstrap")
     @Scripts.Render("~/assets/js/plugin")
-
 
 
     <script>
@@ -124,5 +127,28 @@
             fillColor: 'rgba(255, 255, 255, .15)'
         });
     </script>
+
+    <script>
+		$(document).ready(function() {
+						// Add Row
+			$('#add-row').DataTable({
+				"pageLength": 5,
+			});
+
+			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Edit Task"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove"> <i class="fa fa-times"></i> </button> </div> </td>';
+
+			$('#addRowButton').click(function() {
+				$('#add-row').dataTable().fnAddData([
+					$("#addName").val(),
+					$("#addPosition").val(),
+					$("#addOffice").val(),
+					action
+					]);
+				$('#addRowModal').modal('hide');
+
+			});
+		});
+    </script>
+
 </body>
 </html>
