@@ -1,44 +1,224 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="tr">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>Detay Stor Perde Yıkama</title>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./Content/img/core-img/favicon2.ico">
+
+    <!-- Core Stylesheet -->
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link href="./Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="./Content/classy-nav.css" rel="stylesheet" />
+    <link href="./Content/owl.carousel.min.css" rel="stylesheet" />
+    <link href="./Content/animate.css" rel="stylesheet" />
+    <link href="./Content/magnific-popup.css" rel="stylesheet" />
+    <link href="./Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="./Content/elegant-icon.css" rel="stylesheet" />
+    <link href="./Content/style.css" rel="stylesheet" />
+
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="./Content/img/core-img/bubble.png" alt="">
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- ***** Top Header Area ***** -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="top-header-content d-flex align-items-center justify-content-between">
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta">
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="detayperdestor@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span>Email: detayperdestor@gmail.com</span></a>
+                                <a href="#" data-toggle="tooltip" data-placement="bottom" title="+90 532 123 45 67"><i class="fa fa-phone" aria-hidden="true"></i> <span>İletişim: +90 532 123 45 67</span></a>
+                            </div>
+                            <!-- Top Header Content -->
+                            <div class="top-header-meta d-flex">
+                                <!-- Language Dropdown -->
+                                <!-- Silindi -->
+                                <!-- Login -->
+                                <div class="login">
+                                    <a href="#"><i class="fa fa-user" aria-hidden="true"></i> <span>Login</span></a>
+                                </div>
+                                <!-- Cart -->
+                                <!-- Silindi -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+                        <!-- Nav Brand -->
+                        <a href="index.html" class="nav-brand">
+                            <img src="./Content/img/core-img/logo2.png" style="width: 5.5rem;" alt="">
+                        </a>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Ana Sayfa</a></li>
+                                    <li><a href="about.html">Hakkımızda</a></li>
+                                    <li><a href="shop.html">Sipariş Oluştur</a></li>
+                                    <li><a href="contact.html">İletişim</a></li>
+                                </ul>
+                                <!-- Search Icon -->
+                                <!-- Silindi -->
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                    <!-- Search Form -->
+                    <!-- silindi -->
+                </div>
+            </div>
+        </div>
+    </header>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <section class="hero-area">
+
+        @RenderBody()
+
+    </section>
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(./Content/img/bg-img/3-4.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-4 text-center">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-30">
+                                <a href="#"><img src="./Content/img/core-img/logo2.png" alt=""></a>
+                            </div>
+                            <p>Bizi takip edin.</p>
+                            <div class="social-info">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-4 text-center">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>SAYFALAR</h5>
+                            </div>
+                            <nav class="widget-nav">
+                                <ul>
+                                    <li><a href="#">Ana Sayfa</a></li>
+                                    <li><a href="#">Hakkımızda</a></li>
+                                    <li><a href="#">Sipariş Oluştur</a></li>
+                                    <li><a href="#">İletişim</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget -->
+                    <!-- Silindi -->
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>İLETİŞİM</h5>
+                            </div>
+                            <div class="contact-information">
+                                <p><span>Addres:</span> Boğaziçi, İstanbul</p>
+                                <p><span>Telefon:</span> +90 532 123 45 67</p>
+                                <p><span>Email:</span> detayperdestor@gmail.com</p>
+                                <p><span>Çalışma Saatleri:</span> Mon - Sun: 8 AM to 9 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>
+                                &copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> Tüm Hakları Saklıdır. | Bu site esyum tarafından <i class="fa fa-heart-o" aria-hidden="true"></i> ile tasarlanmıştır.
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Footer Nav -->
+                    <div class="col-12 col-md-6">
+                        <div class="footer-nav">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Ana Sayfa</a></li>
+                                    <li><a href="#">Hakkımızda</a></li>
+                                    <li><a href="#">Sipariş Oluştur</a></li>
+                                    <li><a href="#">İletişim</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="./scripts/jquery-2.2.4.min.js"></script>
+
+    <!-- Popper js -->
+    <script src="./scripts/popper.min.js"></script>
+
+    <!-- Bootstrap js -->
+    <script src="./scripts/bootstrap.min.js"></script>
+
+    <!-- All Plugins js -->
+    <script src="./scripts/plugins.js"></script>
+
+    <!-- Active js -->
+    <script src="./scripts/active.js"></script>
+
 </body>
 </html>

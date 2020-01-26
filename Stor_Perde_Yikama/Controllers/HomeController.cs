@@ -14,7 +14,7 @@ namespace Stor_Perde_Yikama.Controllers
         {
             DatabaseContext db = new DatabaseContext();
             List<Slayder> slayt = db.slayder.ToList();
-            return View();
+            return View(slayt);
         }
 
         public ActionResult About()
