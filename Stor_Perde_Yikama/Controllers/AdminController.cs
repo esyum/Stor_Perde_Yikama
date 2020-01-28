@@ -159,5 +159,11 @@ namespace Stor_Perde_Yikama.Controllers
             return RedirectToAction("MySlayder");
         }
 
+        public ActionResult MyGalery()
+        {
+            List<Galery> _galery = db.galery.OrderByDescending(x => x.OlusturmaTarihi).ToList();
+            return View(_galery);
+        }
+
     }
 }

@@ -10,6 +10,7 @@ namespace Stor_Perde_Yikama.Context
     public class DatabaseContext : DbContext
     {
         public DbSet<Slayder> slayder { get; set; }
+        public DbSet<Galery> galery { get; set; }
 
         public DatabaseContext()
         {
