@@ -8,24 +8,27 @@ using System.Web;
 namespace Stor_Perde_Yikama.Models
 {
     [Table("Galery")]
-    public class Galery
+    public partial class Galery
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        [Required]
+
+        [Display(Name ="Grup"), Required]
         public string filter_name { get; set; }
 
+        [Display(Name = "Resim")]
         public byte[] galery_pic { get; set; }
 
-        [StringLength(30)]
+        [Display(Name = "Resim Açıklaması"), StringLength(30),Required]
         public string title { get; set; }
 
-        [StringLength(30)]
+        [Display(Name = "Başlık"), StringLength(30),Required]
         public string baslik { get; set; }
 
-        [StringLength(30)]
+        [Display(Name = "Alt Başlık"), StringLength(30),Required]
         public string alt_baslik { get; set; }
 
+        [Display(Name = "Oluşturulma Tarihi")]
         public DateTime OlusturmaTarihi { get; set; }
 
     }

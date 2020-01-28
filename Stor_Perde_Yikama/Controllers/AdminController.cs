@@ -165,5 +165,57 @@ namespace Stor_Perde_Yikama.Controllers
             return View(_galery);
         }
 
+        // GET: Admin/Create
+        public ActionResult Galery_Create()
+        {
+            return View();
+        }
+
+        
+
+        // POST: Admin/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Galery_Create(Galery s, HttpPostedFileBase file)
+        {
+            try
+            {
+                Galery _galery = new Galery();
+                if (file != null && file.ContentLength > 0)
+                {
+                    MemoryStream memoryStream = file.InputStream as MemoryStream;
+                    if (memoryStream == null)
+                    {
+                        memoryStream = new MemoryStream();
+                        file.InputStream.CopyTo(memoryStream);
+                    }
+                    _galery.galery_pic = memoryStream.ToArray();
+
+                    _galery.baslik = s.baslik;
+                    _galery.alt_baslik = s.alt_baslik;
+                    _galery.filter_name = s.filter_name;
+                    _galery.title = s.title;
+                    _galery.OlusturmaTarihi = DateTime.Now;
+
+                    db.galery.Add(_galery);
+                    db.SaveChanges();
+
+                    return RedirectToAction("MyGalery", "Admin");
+
+                }
+
+                return View(s);
+
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Hata oluştu");
+            }
+        }
+
+
     }
 }
