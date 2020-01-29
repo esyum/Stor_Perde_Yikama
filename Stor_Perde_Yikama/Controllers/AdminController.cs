@@ -72,7 +72,6 @@ namespace Stor_Perde_Yikama.Controllers
             }
         }
 
-
         // GET: Admin/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -171,14 +170,12 @@ namespace Stor_Perde_Yikama.Controllers
             return View();
         }
 
-        
-
         // POST: Admin/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Galery_Create(Galery s, HttpPostedFileBase file)
+        public ActionResult Galery_Create(AnaSayfaDTO s, HttpPostedFileBase file)
         {
             try
             {
@@ -193,10 +190,10 @@ namespace Stor_Perde_Yikama.Controllers
                     }
                     _galery.galery_pic = memoryStream.ToArray();
 
-                    _galery.baslik = s.baslik;
-                    _galery.alt_baslik = s.alt_baslik;
-                    _galery.filter_name = s.filter_name;
-                    _galery.title = s.title;
+                    _galery.baslik = s.DTO_Galery_Model.baslik;
+                    _galery.alt_baslik = s.DTO_Galery_Model.alt_baslik;
+                    _galery.filter_name = s.DTO_Galery_Model.filter_name;
+                    _galery.title = s.DTO_Galery_Model.title;
                     _galery.OlusturmaTarihi = DateTime.Now;
 
                     db.galery.Add(_galery);
@@ -216,6 +213,86 @@ namespace Stor_Perde_Yikama.Controllers
             }
         }
 
+        public ActionResult Galery_Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Galery _galery = db.galery.Find(id);
+            if (_galery == null)
+            {
+                return HttpNotFound();
+            }
+            return View(_galery);
+        }
+
+        [HttpPost, ActionName("Galery_Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed_Galery(int id)
+        {
+            Galery _galery = db.galery.Find(id);
+            db.galery.Remove(_galery);
+            db.SaveChanges();
+            return RedirectToAction("MyGalery");
+        }
+
+        // GET: Admin/Edit/5
+        public ActionResult Galery_Edit(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Galery _galery = db.galery.Find(id);
+            if (_galery == null)
+            {
+                return HttpNotFound();
+            }
+            return View(_galery);
+        }
+
+        // POST: Admin/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Galery_Edit(Galery s, HttpPostedFileBase file)
+        {
+            try
+            {
+                Galery _galery = new Galery();
+                if (file != null && file.ContentLength > 0)
+                {
+                    MemoryStream memoryStream = file.InputStream as MemoryStream;
+                    if (memoryStream == null)
+                    {
+                        memoryStream = new MemoryStream();
+                        file.InputStream.CopyTo(memoryStream);
+                    }
+                    _galery.galery_pic = memoryStream.ToArray();
+                }
+
+                _galery.ID = s.ID;
+                _galery.baslik = s.baslik;
+                _galery.alt_baslik = s.alt_baslik;
+                _galery.title = s.title;
+                _galery.filter_name = s.filter_name;
+                _galery.OlusturmaTarihi = DateTime.Now;
+
+                db.Entry(_galery).State = EntityState.Modified;
+
+                if (file == null)
+                    db.Entry(_galery).Property(m => m.galery_pic).IsModified = false;
+                db.SaveChanges();
+
+                return RedirectToAction("MyGalery", "Admin");
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Hata oluştu");
+            }
+
+        }
 
     }
 }

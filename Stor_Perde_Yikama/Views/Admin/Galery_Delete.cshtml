@@ -1,9 +1,10 @@
-﻿@model Stor_Perde_Yikama.Models.Slayder
+﻿@model Stor_Perde_Yikama.Models.Galery
 
 @{
-    ViewBag.Title = "Slayder Sil";
+    ViewBag.Title = "Galery Sil";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 
 <div class="content">
     <div class="page-inner">
@@ -23,29 +24,29 @@
 
                             <dl class="dl-horizontal">
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.SliderFoto)
+                                    @Html.DisplayNameFor(model => model.galery_pic)
                                 </dt>
 
                                 <dd>
-                                    <img src="data:image/png;base64,@System.Convert.ToBase64String(Model.SliderFoto)"
+                                    <img src="data:image/png;base64,@System.Convert.ToBase64String(Model.galery_pic)"
                                          alt="resim yüklenemedi" height=100 width=100 />
-                                   @* @Html.DisplayFor(model => model.SliderFoto)*@
+                                    @* @Html.DisplayFor(model => model.SliderFoto)*@
                                 </dd>
 
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.SliderText)
+                                    @Html.DisplayNameFor(model => model.baslik)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.SliderText)
+                                    @Html.DisplayFor(model => model.baslik)
                                 </dd>
 
                                 <dt>
-                                    @Html.DisplayNameFor(model => model.SliderSubText)
+                                    @Html.DisplayNameFor(model => model.alt_baslik)
                                 </dt>
 
                                 <dd>
-                                    @Html.DisplayFor(model => model.SliderSubText)
+                                    @Html.DisplayFor(model => model.alt_baslik)
                                 </dd>
 
                             </dl>
@@ -57,7 +58,7 @@
 
                                 <div class="form-actions no-color">
                                     <input type="submit" value="Sil" class="btn btn-default" /> |
-                                    @Html.ActionLink("Geri Dön", "MySlayder")
+                                    @Html.ActionLink("Geri Dön", "MyGalery")
                                 </div>
                             }
                         </div>

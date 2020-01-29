@@ -209,7 +209,7 @@
     <Compile Include="Context\DatabaseContext.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
-    <Compile Include="Controllers\denemeController.cs" />
+    <Compile Include="Controllers\AnaSayfaDTO.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +217,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Galery.cs" />
+    <Compile Include="Models\Galery_Tur.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Slayder.cs" />
@@ -912,6 +913,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
+    <Content Include="Scripts\webfont.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -953,9 +955,10 @@
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Create.cshtml" />
-    <Content Include="Views\deneme\Index.cshtml" />
     <Content Include="Views\Admin\MyGalery.cshtml" />
     <Content Include="Views\Admin\Galery_Create.cshtml" />
+    <Content Include="Views\Admin\Galery_Delete.cshtml" />
+    <Content Include="Views\Admin\Galery_Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

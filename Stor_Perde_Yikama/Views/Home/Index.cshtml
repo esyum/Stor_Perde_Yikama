@@ -1,5 +1,6 @@
 ﻿
-@model List<Stor_Perde_Yikama.Models.Slayder>
+@*@model List<Stor_Perde_Yikama.Models.Slayder>*@
+    @model Stor_Perde_Yikama.Controllers.AnaSayfaDTO
 
 @{
     ViewBag.Title = "Index";
@@ -10,7 +11,7 @@
     <div class="hero-post-slides owl-carousel">
         <!-- Single Hero Post -->
 
-        @foreach (var slayt in Model)
+        @foreach (var slayt in Model.DTO_slider)
         {
             <div class="single-hero-post bg-overlay">
                 <!-- Post Image -->
@@ -149,31 +150,38 @@
                 <div class="alazea-portfolio-filter">
                     <div class="portfolio-filter">
                         <button class="btn active" data-filter="*">Hepsi</button>
-                        <button class="btn" data-filter=".design">Yıkanmış Ürünler</button>
-                        <button class="btn" data-filter=".garden">Karşılaştırma</button>
-                        <button class="btn" data-filter=".home-design">Ev Hizmetleri</button>
-                        <button class="btn" data-filter=".office-design">Ofis Hizmetleri</button>
+                        <button class="btn" data-filter=".temiz">Yıkanmış Ürünler</button>
+                        <button class="btn" data-filter=".kiyas">Karşılaştırma</button>
+                        <button class="btn" data-filter=".ev">Ev Hizmetleri</button>
+                        <button class="btn" data-filter=".is">Ofis Hizmetleri</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row alazea-portfolio">
             <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design wow fadeInUp" data-wow-delay="100ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/16-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/16-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 1">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik-111</h3>
-                            <h5>Kalite Önceliğimiz-111</h5>
-                        </div>
-                    </a>
+
+            @foreach (var item in Model.DTO_galery)
+                {
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item @item.filter_name wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url('data:image/png;base64,@System.Convert.ToBase64String(item.galery_pic)');"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="data:image/png;base64,@System.Convert.ToBase64String(item.galery_pic)" class="portfolio-img d-flex align-items-center justify-content-center" title=@item.title>
+                            <div class="port-hover-text">
+                                <h3>@item.baslik</h3>
+                                <h5>@item.alt_baslik</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
+            }
+
+
             <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design wow fadeInUp" data-wow-delay="100ms">
+            
+            @*<div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design wow fadeInUp" data-wow-delay="100ms">
                 <!-- Portfolio Thumbnail -->
                 <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/20-1.jpeg);"></div>
                 <!-- Portfolio Hover Text -->
@@ -327,9 +335,9 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </div>*@
 
-
+          
 
 
 

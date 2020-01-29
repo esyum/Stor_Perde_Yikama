@@ -1,7 +1,8 @@
-﻿@model Stor_Perde_Yikama.Models.Galery
+﻿@*@model Stor_Perde_Yikama.Models.Galery*@
+@model Stor_Perde_Yikama.Controllers.AnaSayfaDTO
 
 @{
-    ViewBag.Title = "Galery_Create";
+    ViewBag.Title = "Galeri Bilgi Ekleme";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
@@ -28,49 +29,49 @@
                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.baslik, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.DTO_Galery_Model.baslik, htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.EditorFor(model => model.baslik, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.baslik, "", new { @class = "text-danger" })
+                                        @Html.EditorFor(model => model.DTO_Galery_Model.baslik, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.DTO_Galery_Model.baslik, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.alt_baslik, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.DTO_Galery_Model.alt_baslik, htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.EditorFor(model => model.alt_baslik, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.alt_baslik, "", new { @class = "text-danger" })
+                                        @Html.EditorFor(model => model.DTO_Galery_Model.alt_baslik, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.DTO_Galery_Model.alt_baslik, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.DTO_Galery_Model.title, htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
-                                        @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
+                                        @Html.EditorFor(model => model.DTO_Galery_Model.title, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.DTO_Galery_Model.title, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.filter_name, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.DTO_Galery_Model.filter_name, htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
-                                        @Html.DropDownListFor(model => model.filter_name,
+                                        @Html.DropDownListFor(model => model.DTO_Galery_Model.filter_name,
                                        new List<SelectListItem>
                                             {
-                                                new SelectListItem {Text = "Not verified", Value = "sdf"},
-                                                new SelectListItem {Text = "Verified", Value = "asdfff"},
-                                                new SelectListItem {Text = "Migrated", Value = "ppp"},
-                                                new SelectListItem {Text = "Completed", Value = "yyy"}
-                                            } 
+                                                new SelectListItem {Text = "Yıkanmış Ürünler", Value = "temiz"},
+                                                new SelectListItem {Text = "Karşılaştırma", Value = "kiyas"},
+                                                new SelectListItem {Text = "Ev Hizmetleri", Value = "ev"},
+                                                new SelectListItem {Text = "Ofis Hizmetleri", Value = "is"}
+                                            }
 
                                        , "Seçiniz", new { htmlAttributes = new { @class = "form-control" } })
 
-                                        @Html.ValidationMessageFor(model => model.filter_name, "", new { @class = "text-danger" })
+                                        @Html.ValidationMessageFor(model => model.DTO_Galery_Model.filter_name, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    @Html.LabelFor(model => model.galery_pic, htmlAttributes: new { @class = "control-label col-md-2" })
+                                    @Html.LabelFor(model => model.DTO_Galery_Model.galery_pic, htmlAttributes: new { @class = "control-label col-md-2" })
                                     <div class="col-md-10">
                                         <input type="file" id="file" name="file" />
 

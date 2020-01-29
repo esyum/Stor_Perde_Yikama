@@ -48,6 +48,7 @@ namespace Stor_Perde_Yikama
                       //"~/assets/js/plugin/chart.js/chart.min.js",
                       //"~/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js",
                       //"~/assets/js/plugin/chart-circle/circles.min.js",
+                      "~/assets/js/plugin/webfont/webfont.min.js",
                       "~/assets/js/plugin/datatables/datatables.min.js",
                       "~/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js",
                       //"~/assets/js/plugin/jqvmap/jquery.vmap.min.js",
