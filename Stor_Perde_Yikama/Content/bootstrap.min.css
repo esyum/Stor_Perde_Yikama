@@ -2623,10 +2623,10 @@ textarea.form-control {
     text-decoration: none;
 }
 
-.btn.focus, .btn:focus {
+/* .btn.focus, .btn:focus {
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
-}
+} */
 
 .btn.disabled, .btn:disabled {
     opacity: .65;
@@ -2927,9 +2927,9 @@ a.btn.disabled, fieldset:disabled a.btn {
         border-color: #007bff;
     }
 
-    .btn-outline-primary.focus, .btn-outline-primary:focus {
+    /* .btn-outline-primary.focus, .btn-outline-primary:focus {
         box-shadow: 0 0 0 .2rem rgba(0,123,255,.5);
-    }
+    } */
 
     .btn-outline-primary.disabled, .btn-outline-primary:disabled {
         color: #007bff;

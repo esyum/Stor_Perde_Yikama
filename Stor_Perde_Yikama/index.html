@@ -36,6 +36,17 @@
             <img src="./Content/img/core-img/bubble.png" alt="">
         </div>
     </div>
+    <!-- Preloader Ends -->
+    <!-- Popup Starts-->
+    <div class="backdrop_enes"></div>
+    <div class="modal_enes">
+        <h1 class="modal__title_enes">Bu Kısım Dinamik Gelecek</h1>
+        <p class="modal__info_enes">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit dolorum sunt quis libero mollitia dolor tempora reiciendis cum. Dolores numquam consequatur consectetur sunt dicta, incidunt itaque? Deleniti quasi dolorem cumque.</p>
+        <div class="modal__actions_enes">
+            <button class="btn btn-outline-primary pull-right" type="button">Tamam</button>
+        </div>
+    </div>
+    <!-- Popup Ends -->
     <!-- ##### Header Area Start ##### -->
     <header class="header-area">
         <!-- ***** Top Header Area ***** -->
@@ -168,55 +179,77 @@
             </div>
         </div>
         <div class="row justify-content-between">
-            <div class="col-12 col-lg-8">
+            <div class="col-12 col-lg-12">
                 <div class="alazea-service-area mb-100">
-                    <!-- Single Service Area -->
-                    <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
-                        <!-- Icon -->
-                        <div class="service-icon mr-30">
-                            <img src="./Content/img/core-img/s1-1.png" alt="">
-                        </div>
-                        <!-- Content -->
-                        <div class="service-content">
-                            <h5>STOR PERDE YIKAMA</h5>
-                            <p>Stor perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında stor perdeleriniz yerine ücretsiz olarak monte edlilir</p>
-                        </div>
-                    </div>
-                    <!-- Single Service Area -->
-                    <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
-                        <!-- Icon -->
-                        <div class="service-icon mr-30">
-                            <img src="./Content/img/core-img/s2-2.png" alt="">
-                        </div>
-                        <!-- Content -->
-                        <div class="service-content">
-                            <h5>ZEBRA PERDE YIKAMA</h5>
-                            <p>Siz değerli müşterilerimiz bize ulaştıktan sona Profesyonel ekibimiz adresinizden Perdelerinizi kendileri söker daha sonra Markalama işlemi yapılır. Stor Perdeleriniz 1 gece kolada bekletildikten sonra kolalanmış perdeleriniz ekiplerimiz tarafından kapalı alanda bol su ile yıkanır. Kuruma işlemi yapıldıktan sonra paketleme işlemi yapılır. </p>
+
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/19-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">STOR PERDE YIKAMA</h5>
+                                    <p class="card-text">Stor perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında stor perdeleriniz yerine ücretsiz olarak monte edlilir...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Single Service Area -->
-                    <div class="single-service-area d-flex align-items-center wow fadeInUp" data-wow-delay="500ms">
-                        <!-- Icon -->
-                        <div class="service-icon mr-30">
-                            <img src="./Content/img/core-img/s3-3.jpg" alt="">
-                        </div>
-                        <!-- Content -->
-                        <div class="service-content">
-                            <h5>TÜL PERDE YIKAMA</h5>
-                            <p>Tül perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında tül perdeleriniz yerine ücretsiz olarak monte edlilir Zümrüt perde yıkamaya danışmadan perdelerinizi yıkatmayın.</p>
+
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">ZEBRA PERDE YIKAMA</h5>
+                                    <p class="card-text">Zebra Perde Yıkama da, Siz değerli müşterilerimiz bize ulaştıktan sona Profesyonel ekibimiz adresinizden Perdelerinizi kendileri söker daha sonra Markalama işlemi yapılır. Stor Perdeleriniz 1 gece kolada bekletildikten sonra kolalanmış perdeleriniz ekiplerimiz tarafından kapalı alanda bol su ile yıkanır...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-left mb-3">Devamı...</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/16-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
                         </div>
                     </div>
+
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/21-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">TÜL PERDE YIKAMA</h5>
+                                    <p class="card-text">Tül perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında tül perdeleriniz yerine ücretsiz olarak monte edlilir Zümrüt perde yıkamaya danışmadan...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Launch demo modal
+            </button>
+
+            @Bootstrap.ModalPopup()
+
+
+
+            @*<div class="col-12 col-lg-4">
                 <div class="alazea-video-area bg-overlay mb-100">
                     <img src="./Content/img/bg-img/23-3.jpg" alt="">
-                    <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">
-                        <!-- link düzenlenecek -->
-                        <i class="fa fa-play" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
+                    <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">*@
+            <!-- link düzenlenecek -->
+            @*<i class="fa fa-play" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>*@
         </div>
     </div>
 </section>

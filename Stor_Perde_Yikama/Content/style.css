@@ -2651,6 +2651,51 @@ img {
 button.btn.alazea-btn.mt-15:hover {
   color: #0ca4ff;
 }
+
+.backdrop_enes {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal_enes {
+  position: fixed;
+  /* display: none; */
+  opacity: 0;
+  transform: translateY(-3rem);
+  transition: opacity 200ms ease-out, transform 500ms ease-out;
+  /* 4 taneye kadar elemanı ekleyebiliriz. yeni ne kadar sürede tamamlyacağız
+  onu belirtiyoruz. nereden nereye gideceğimizi belirtiyoruz.
+  Bu örnek için opacity 0 dan başlıyor, shared.css de bulunan open clası ile
+  opacity 1 olacak. y ekseninde -3remden 0'a gelecek yani asıl konumuna.
+  ease-out yardımcı fonksiyon. buna göre hızlı yavaş başla bitir yapıyor
+    */
+
+  z-index: 1200;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title_enes {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__info_enes {
+  text-align: center;
+  padding: 1rem;
+}
+
 /* ======= The End ======= */
 
 /*# sourceMappingURL=style.css.map */
