@@ -2654,10 +2654,10 @@ button.btn.alazea-btn.mt-15:hover {
 
 .backdrop_enes {
   position: fixed;
-  display: none;
+  display: block;
+  z-index: -2;
   top: 0;
   left: 0;
-  z-index: 1000;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
@@ -2665,21 +2665,15 @@ button.btn.alazea-btn.mt-15:hover {
 
 .modal_enes {
   position: fixed;
-  /* display: none; */
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   transform: translateY(-3rem);
   transition: opacity 200ms ease-out, transform 500ms ease-out;
-  /* 4 taneye kadar elemanı ekleyebiliriz. yeni ne kadar sürede tamamlyacağız
-  onu belirtiyoruz. nereden nereye gideceğimizi belirtiyoruz.
-  Bu örnek için opacity 0 dan başlıyor, shared.css de bulunan open clası ile
-  opacity 1 olacak. y ekseninde -3remden 0'a gelecek yani asıl konumuna.
-  ease-out yardımcı fonksiyon. buna göre hızlı yavaş başla bitir yapıyor
-    */
-
-  z-index: 1200;
-  top: 40%;
-  left: 30%;
-  width: 40%;
+  z-index: -1;
+  top: 20%;
+  left: 20%;
+  width: 60%;
   background: white;
   padding: 1rem;
   border: 1px solid #ccc;
@@ -2694,7 +2688,38 @@ button.btn.alazea-btn.mt-15:hover {
 .modal__info_enes {
   text-align: center;
   padding: 1rem;
+  flex-grow: 1;
 }
+.modal__actions_enes {
+  margin: 0;
+}
+
+@media(max-width:760px) {
+  .modal_enes {
+    padding: 0;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    width: auto;
+  }
+  .modal__title_enes {
+    margin: 0;
+  }
+  .modal__info_enes {
+    padding: 0.2rem;
+  }
+  .modal__actions_enes {
+    margin: 0 0.5rem 1rem;
+  }
+}
+
+.open {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1200;
+}
+
+
 
 /* ======= The End ======= */
 
