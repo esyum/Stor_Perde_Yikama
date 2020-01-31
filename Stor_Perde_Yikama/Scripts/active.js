@@ -204,15 +204,24 @@
 
   // :: 15.0 Backdrop and Model
   $(".card-body button").on("click", function() {
-    $(".backdrop_enes").addClass("open");
     $(".modal_enes").addClass("open");
+    $(".backdrop_enes").css({ display: "block" });
+    setTimeout(() => {
+      $(".backdrop_enes").addClass("open");
+    }, 10);
   });
   $(".backdrop_enes").on("click", function() {
-    $(".backdrop_enes").removeClass("open");
     $(".modal_enes").removeClass("open");
+    $(".backdrop_enes").removeClass("open");
+    setTimeout(() => {
+      $(".backdrop_enes").css({ display: "none" });
+    }, 200);
   });
   $(".modal__actions_enes button").on("click", function() {
     $(".backdrop_enes").removeClass("open");
     $(".modal_enes").removeClass("open");
+    setTimeout(() => {
+      $(".backdrop_enes").css({ display: "none" });
+    }, 200);
   });
 })(jQuery);
