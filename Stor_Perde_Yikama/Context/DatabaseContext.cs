@@ -14,6 +14,7 @@ namespace Stor_Perde_Yikama.Context
         public DbSet<Slayder> slayder { get; set; }
         public DbSet<Galery> galery { get; set; }
         public DbSet<Galery_Tur> galery_tur { get; set; }
+        public DbSet<HizmetTuru> hizmet_turu { get; set; }
 
         public DatabaseContext()
         {

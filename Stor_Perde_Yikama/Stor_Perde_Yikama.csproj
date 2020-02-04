@@ -218,6 +218,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Galery.cs" />
     <Compile Include="Models\Galery_Tur.cs" />
+    <Compile Include="Models\HizmetTuru.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Slayder.cs" />

@@ -17,6 +17,7 @@ namespace Stor_Perde_Yikama.Controllers
             AnaSayfaDTO obj = new AnaSayfaDTO();
             obj.DTO_slider = db.slayder.OrderByDescending(x => x.OlusturmaTarihi).ToList();
             obj.DTO_galery = db.galery.OrderByDescending(x => x.OlusturmaTarihi).ToList();
+            obj.DTO_Hizmet_Turu = db.hizmet_turu.ToList();
             //List<Slayder> slayt = db.slayder.ToList();
             return View(obj);
         }

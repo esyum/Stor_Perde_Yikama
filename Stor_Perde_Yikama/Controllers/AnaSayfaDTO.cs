@@ -18,5 +18,7 @@ namespace Stor_Perde_Yikama.Controllers
 
         public Galery DTO_Galery_Model { get; set; }
 
+        public List<HizmetTuru> DTO_Hizmet_Turu { get; set; }
+
     }
 }
