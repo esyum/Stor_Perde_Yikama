@@ -1,6 +1,5 @@
-﻿
-@*@model List<Stor_Perde_Yikama.Models.Slayder>*@
-    @model Stor_Perde_Yikama.Controllers.AnaSayfaDTO
+﻿@*@model List<Stor_Perde_Yikama.Models.Slayder>*@
+@model Stor_Perde_Yikama.Controllers.AnaSayfaDTO
 
 @{
     ViewBag.Title = "Index";
@@ -24,8 +23,8 @@
                                 <h2>@slayt.SliderText</h2>
                                 <p>@slayt.SliderSubText</p>
                                 <div class="welcome-btn-group">
-                                    <a href="#" class="btn alazea-btn mr-30">GET STARTED</a>
-                                    <a href="#" class="btn alazea-btn active">CONTACT US</a>
+                                    <a href="/About" class="btn alazea-btn mr-30">HAKKIMIZDA</a>
+                                    <a href="/Contact" class="btn alazea-btn active">İLETİŞİM</a>
                                 </div>
                             </div>
                         </div>
@@ -51,55 +50,100 @@
                 </div>
             </div>
         </div>
+
         <div class="row justify-content-between">
             <div class="col-12 col-lg-12">
                 <div class="alazea-service-area mb-100">
 
                     <div class="card mb-3">
                         <div class="row no-gutters">
-
-                            @foreach (var item in Model.DTO_Hizmet_Turu)
-                            {
-                                <div class="col-md-2">
-                                    @*<img src="data:image/png;base64,@System.Convert.ToBase64String(item.fotograf)" style="height:100%" class="card-img" alt="...">*@
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/19-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">STOR PERDE YIKAMA</h5>
+                                    <p class="card-text">Stor perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında stor perdeleriniz yerine ücretsiz olarak monte edlilir...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
                                 </div>
-                                <div class="col-md-10">
-                                    <div class="card-body">
+                            </div>
+                        </div>
+                    </div>
 
-                                        <h5 class="card-title">@item.Title</h5>
-                                        <p class="card-text">@item.TitleSub</p>
-                                        <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
 
-                                        @Bootstrap.ModalPopup_Enes(id: "myModal2", title: item.Title)
-
-                                    </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">ZEBRA PERDE YIKAMA</h5>
+                                    <p class="card-text">Zebra Perde Yıkama da, Siz değerli müşterilerimiz bize ulaştıktan sona Profesyonel ekibimiz adresinizden Perdelerinizi kendileri söker daha sonra Markalama işlemi yapılır. Stor Perdeleriniz 1 gece kolada bekletildikten sonra kolalanmış perdeleriniz ekiplerimiz tarafından kapalı alanda bol su ile yıkanır...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-left mb-3">Devamı...</button>
                                 </div>
-                            }
+                            </div>
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/16-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="card mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-2">
+                                <img src="./Content/img/bg-img/21-1.jpeg" style="height:100%" class="card-img" alt="...">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h5 class="card-title">TÜL PERDE YIKAMA</h5>
+                                    <p class="card-text">Tül perde yıkama için özel ve temiz su ile yıkama işlemi yapılmaktadır yine yıkama tesislerimizde kurutma odalarında muhafaza edilmektedir kurutma işleminden sonra paketlenip profesyonel ekiplerimiz tarafında tül perdeleriniz yerine ücretsiz olarak monte edlilir Zümrüt perde yıkamaya danışmadan...</p>
+                                    <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                 </div>
             </div>
+        </div>
 
-            <!-- Button trigger modal -->
-            @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+
+        @*@foreach (var item in Model.DTO_Hizmet_Turu)
+            {
+                <div class="col-md-2">
+                    <img src="data:image/png;base64,@System.Convert.ToBase64String(item.fotograf)" style="height:100%" class="card-img" alt="...">
+                </div>
+                <div class="col-md-10">
+                    <div class="card-body">
+
+                        <h5 class="card-title">@item.Title</h5>
+                        <p class="card-text">@item.TitleSub</p>
+                        <button type="button" class="btn btn-outline-primary pull-right mb-3">Devamı...</button>
+
+                        @Bootstrap.ModalPopup_Enes(id: "myModal2", title: item.Title)
+
+                    </div>
+                </div>
+            }*@
+
+
+
+        <!-- Button trigger modal -->
+        @*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Launch demo modal
             </button>*@
 
-            @*@Bootstrap.ModalPopup_Enes(id: "myModal2", title: "Modal Title 2")*@
+        @*@Bootstrap.ModalPopup_Enes(id: "myModal2", title: "Modal Title 2")*@
 
-            @*<div class="col-12 col-lg-4">
-                <div class="alazea-video-area bg-overlay mb-100">
-                    <img src="./Content/img/bg-img/23-3.jpg" alt="">
-                    <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">*@
-            <!-- link düzenlenecek -->
-            @*<i class="fa fa-play" aria-hidden="true"></i>
-                            </a>
-                        </div>
+        @*<div class="col-12 col-lg-4">
+            <div class="alazea-video-area bg-overlay mb-100">
+                <img src="./Content/img/bg-img/23-3.jpg" alt="">
+                <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">*@
+        <!-- link düzenlenecek -->
+        @*<i class="fa fa-play" aria-hidden="true"></i>
+                        </a>
                     </div>
-                </div>*@
-        </div>
+                </div>
+            </div>*@
+    </div>
     </div>
 </section>
 
@@ -138,7 +182,7 @@
             <!-- Single Portfolio Area -->
 
             @foreach (var item in Model.DTO_galery)
-                {
+            {
                 <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item @item.filter_name wow fadeInUp" data-wow-delay="100ms">
                     <!-- Portfolio Thumbnail -->
                     <div class="portfolio-thumbnail bg-img" style="background-image: url('data:image/png;base64,@System.Convert.ToBase64String(item.galery_pic)');"></div>
@@ -156,164 +200,163 @@
 
 
             <!-- Single Portfolio Area -->
-            
             @*<div class="col-12 col-sm-6 col-lg-3 single_portfolio_item design office-design wow fadeInUp" data-wow-delay="100ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/20-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/20-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/20-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/20-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 5">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-lg-6 single_portfolio_item design wow fadeInUp" data-wow-delay="400ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/22-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/22-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 8">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-lg-6 single_portfolio_item design wow fadeInUp" data-wow-delay="400ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/22-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/22-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 8">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/17-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/17-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 2">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/17-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/17-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 2">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden design office-design wow fadeInUp" data-wow-delay="300ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/18-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/18-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden design office-design wow fadeInUp" data-wow-delay="300ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/18-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/18-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden office-design wow fadeInUp" data-wow-delay="400ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/19-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/19-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 4">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden office-design wow fadeInUp" data-wow-delay="400ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/19-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/19-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 4">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="100ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/50-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/50-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item garden wow fadeInUp" data-wow-delay="100ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/50-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/50-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-lg-6 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/51-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/51-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-lg-6 single_portfolio_item garden wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/51-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/51-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 3">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item home-design wow fadeInUp" data-wow-delay="200ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/21-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/21-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item home-design wow fadeInUp" data-wow-delay="200ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/21-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/21-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 6">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/23-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/23-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-sm-6 col-lg-3 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/23-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/23-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/24-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/24-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="300ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/24-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/24-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <!-- Single Portfolio Area -->
-            <div class="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="400ms">
-                <!-- Portfolio Thumbnail -->
-                <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/52-1.jpeg);"></div>
-                <!-- Portfolio Hover Text -->
-                <div class="portfolio-hover-overlay">
-                    <a href="./Content/img/bg-img/52-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
-                        <div class="port-hover-text">
-                            <h3>Detay Stor Perde Temizlik</h3>
-                            <h5>Kalite Önceliğimiz</h5>
-                        </div>
-                    </a>
-                </div>
-            </div>*@
+                <!-- Single Portfolio Area -->
+                <div class="col-12 col-lg-6 single_portfolio_item home-design wow fadeInUp" data-wow-delay="400ms">
+                    <!-- Portfolio Thumbnail -->
+                    <div class="portfolio-thumbnail bg-img" style="background-image: url(./Content/img/bg-img/52-1.jpeg);"></div>
+                    <!-- Portfolio Hover Text -->
+                    <div class="portfolio-hover-overlay">
+                        <a href="./Content/img/bg-img/52-1.jpeg" class="portfolio-img d-flex align-items-center justify-content-center" title="Portfolio 7">
+                            <div class="port-hover-text">
+                                <h3>Detay Stor Perde Temizlik</h3>
+                                <h5>Kalite Önceliğimiz</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div>*@
 
-          
+
 
 
 
@@ -497,8 +540,9 @@
             <div class="col-12 col-lg-6">
                 <!-- Google Maps -->
                 <div class="map-area mb-100">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.179165086162!2d29.001578315719065!3d41.02133602656952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzE2LjgiTiAyOcKwMDAnMTMuNiJF!5e0!3m2!1str!2str!4v1579725696064!5m2!1str!2str" allowfullscreen></iframe>
-                </div>
+                 @*   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.179165086162!2d29.001578315719065!3d41.02133602656952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDAxJzE2LjgiTiAyOcKwMDAnMTMuNiJF!5e0!3m2!1str!2str!4v1579725696064!5m2!1str!2str" allowfullscreen></iframe>*@
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d266.12866421849094!2d28.67220686187549!3d41.00551528289827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f7fcf2d279b%3A0xbe8a6b4d8162d8f3!2sPerdeci!5e0!3m2!1str!2str!4v1580905847328!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                </div>
             </div>
         </div>
     </div>

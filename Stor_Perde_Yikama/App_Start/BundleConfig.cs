@@ -8,8 +8,10 @@ namespace Stor_Perde_Yikama
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                  "~/Scripts/jquery-2.2.4.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -20,18 +22,30 @@ namespace Stor_Perde_Yikama
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
+                "~/Scripts/popper.min.js",
+                "~/Scripts/bootstrap.min.js",
+                "~/Scripts/plugins.js",
+                      "~/Scripts/respond.js",
+                      "~/Scripts/active.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.min.css",
+                      "~/Content/classy-nav.css",
+                      "~/Content/owl.carousel.min.css",
+                      "~/Content/animate.css",
+                      "~/Content/magnific-popup.css",
+                      "~/Content/font-awesome.min.css",
+                      "~/Content/elegant-icon.css",
+                      "~/Content/style.css"));
+
+
+
 
             //* Admin *//
 
             bundles.Add(new StyleBundle("~/assets/css").Include(
-                      "~/assets/css/bootstrap.min.css",
-                      "~/assets/css/atlantis.min.css"));
+                        "~/assets/css/bootstrap.min.css",
+                        "~/assets/css/atlantis.min.css"));
 
             bundles.Add(new ScriptBundle("~/assets/js/core").Include(
                       "~/assets/js/core/jquery.3.2.1.min.js",
