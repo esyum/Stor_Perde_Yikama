@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnaSayfaDTO.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -647,6 +648,7 @@
     <Content Include="Content\img\bg-img\AloStorPerdeYikama1.png" />
     <Content Include="Content\img\bg-img\AloStorPerdeYikamaB.png" />
     <Content Include="Content\img\bg-img\AloStorPerdeYikamaRed.png" />
+    <Content Include="Content\img\bg-img\ContactUs.jpg" />
     <Content Include="Content\img\bg-img\cool-facts.png" />
     <Content Include="Content\img\bg-img\perde_kurutma.jpeg" />
     <Content Include="Content\img\bg-img\subscribe.png" />
@@ -925,6 +927,7 @@
     <Content Include="Views\Admin\Galery_Delete.cshtml" />
     <Content Include="Views\Admin\Galery_Edit.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
