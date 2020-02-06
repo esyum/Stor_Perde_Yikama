@@ -212,6 +212,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AnaSayfaDTO.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\deneController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -650,6 +651,7 @@
     <Content Include="Content\img\bg-img\AloStorPerdeYikamaRed.png" />
     <Content Include="Content\img\bg-img\ContactUs.jpg" />
     <Content Include="Content\img\bg-img\cool-facts.png" />
+    <Content Include="Content\img\bg-img\logo.png" />
     <Content Include="Content\img\bg-img\perde_kurutma.jpeg" />
     <Content Include="Content\img\bg-img\subscribe.png" />
     <Content Include="Content\img\bg-img\team1.png" />
@@ -679,6 +681,7 @@
     <Content Include="Content\img\core-img\s3.png" />
     <Content Include="Content\img\storperde.jpg" />
     <Content Include="Content\magnific-popup.css" />
+    <Content Include="Content\main.css" />
     <Content Include="Content\owl.carousel.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\video\yikama.mp4" />
@@ -699,6 +702,7 @@
     <Content Include="Scripts\active.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\animate.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -793,6 +797,7 @@
     <Content Include="Content\bootstrap-reboot.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper.js.map" />
@@ -928,6 +933,8 @@
     <Content Include="Views\Admin\Galery_Edit.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout - Copy.cshtml" />
+    <Content Include="Views\dene\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

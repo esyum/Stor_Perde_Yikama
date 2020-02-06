@@ -27,17 +27,3 @@
         </div>
     </div>
 }
-
-@helper ModalPopup_Enes(string id="myModal",string title="Modal Title",bool showCloseButton=true, string metin="")
-{
-    <!-- Popup Starts-->
-    <div class="backdrop_enes"></div>
-    <div class="modal_enes">
-        <h1 class="modal__title_enes">@title</h1>
-        <p class="modal__info_enes">@(id+"_deneme")</p>
-        <div class="modal__actions_enes">
-            <button class="btn btn-outline-primary pull-right" type="button">Tamam</button>
-        </div>
-    </div>
-    <!-- Popup Ends -->
-}
